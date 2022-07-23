@@ -18,13 +18,8 @@ class CvController extends AbstractController
     public function index(ExperienceRepository $experienceRepository, CompetenceRepository $competenceRepository, FormationRepository $formationRepository, LangueRepository $langueRepository, LoisirRepository $loisirRepository, TechnologieRepository $technologieRepository): Response
     {
         $experiences = $experienceRepository->findAll();
-        $competences = $competenceRepository->findBy(
-            [],
-            [
-                'id' => 'DESC'
-            ],
-        );
-        $formations = $competenceRepository->findBy(
+        $competences = $competenceRepository->findAll();
+        $formations = $formationRepository->findBy(
             [],
             [
                 'id' => 'DESC'
