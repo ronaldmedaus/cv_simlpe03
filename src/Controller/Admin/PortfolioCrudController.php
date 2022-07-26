@@ -2,26 +2,24 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Competence;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use App\Entity\Portfolio;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
-class CompetenceCrudController extends AbstractCrudController
+class PortfolioCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Competence::class;
+        return Portfolio::class;
     }
 
-    
+    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-            
+            IdField::new('id'),
             TextField::new('title'),
             TextEditorField::new('description'),
         ];
     }
-
+    */
 }

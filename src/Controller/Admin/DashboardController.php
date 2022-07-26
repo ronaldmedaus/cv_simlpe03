@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Entity\Langue;
 use App\Entity\Loisir;
 use App\Entity\Formation;
+use App\Entity\Portfolio;
 use App\Entity\Competence;
 use App\Entity\Experience;
 use App\Entity\Technologie;
@@ -56,5 +57,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Compétences', 'fas fa-chart-line', Competence::class);
         yield MenuItem::linkToCrud('Langues', 'fas fa-language', Langue::class);
         yield MenuItem::linkToCrud('Loisir', 'fas fa-calendar-check', Loisir::class);
+        yield MenuItem::linkToCrud('Portfolio', 'fas fa-address-book', Portfolio::class);
     }
 }
