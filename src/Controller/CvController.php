@@ -25,6 +25,7 @@ class CvController extends AbstractController
                 'id' => 'DESC'
             ], 
         );
+        $technologies = $technologieRepository->findAll();
         $langues = $langueRepository->findAll();
         $loisirs = $loisirRepository->findAll();
 
@@ -32,6 +33,7 @@ class CvController extends AbstractController
             'experiences' => $experiences,
             'competences' => $competences,
             'formations' => $formations,
+            'technologies' => $technologies,
             'langues' => $langues,
             'loisirs' => $loisirs
         ]);
