@@ -6,26 +6,48 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Personle Portfolio Website</title>
 		<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/style04.css') }}">
+		<link rel="stylesheet" href="{{ asset('main.scss') }}">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	</head>
 	<body>
 		<div class="hero">
 			{% include "navbar.html.twig" %}
+
 			<div class="detel">
 				<h1>Chalin
 					<span>Amelia</span>
 				</h1>
 				<p>This is my official Portfolio website to showcase my 
-										                all works related to
+																																																																																																																		                all works related to
 					<br>
 					web development and ui design.
 				</p>
-				<a href="{{ asset('CV.pdf')}}">Downdload CV</a>
+
+				<a href="{{ asset('CV.pdf')}}" class="link">
+					<span class="mask">
+						<div class="link-container">
+							<span class="link-title1 title">Télécharger cv</span>
+							<span class="link-title2 title">Télécharger cv</span>
+						</div>
+					</span>
+					<div class="link-icon">
+						<svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+							<path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+						</svg>
+						<svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+							<path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+						</svg>
+					</div>
+				</a>
 			</div>
+
 			<div class="images">
 				<img src="{{ asset('images/shape.png') }}" class="shape">
 				<img src="{{ asset('images/girl.png') }}" class="girl">
 			</div>
+
 
 			<div class="social">
 				<a href="#">
@@ -38,6 +60,6 @@
 					<i class="fab fa-behance"></i>
 				</a>
 			</div>
-		</div>
+		</body>
 	</body>
-</html>
+</html></div></body></html>
