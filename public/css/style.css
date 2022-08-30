@@ -82,3 +82,7 @@ a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
+
+.imageUser {
+    height: 50% !important;
+}

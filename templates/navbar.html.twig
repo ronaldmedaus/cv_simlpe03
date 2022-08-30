@@ -3,6 +3,7 @@
 
 <nav>
 	<img src="{{ asset('images/logo.png') }}" class="logo">
+
 	<ul class="snip1217">
 		<li>
 			<a href="{{ path('app_home')}}">HOME</a>
@@ -13,11 +14,15 @@
 		<li>
 			<a href="{{ path('app_portfolio')}}">PORTFOLIO</a>
 		</li>
-		<li>
-			<a href="#">SERVICES</a>
-		</li>
-		<li>
-			<a href="#">ME CONTACTER</a>
-		</li>
 	</ul>
+	{% if app.user %}
+		<ul>
+			<li class="snip1217">
+				<a href="{{ path('profile_detail')}}">Mon compte</a>
+				|
+				<a href="{{ path('app_logout')}}">Déconnexion</a>
+			</li>
+		</ul>
+
+	{% endif %}
 </nav>
