@@ -1,28 +1,41 @@
 <link href="{{ asset('css/style03.css') }}" rel="stylesheet">
 
+<nav class="navbar navbar-expand-lg">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="{{ path('app_home')}}">
+			<img src="{{ asset('images/logo.png') }}" class="logo">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<ul class="navbar-nav snip1217">
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('app_home')}}">Accueil</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('app_cv')}}">Cv</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('app_portfolio')}}">Portfolio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">ME CONTACTER</a>
+				</li>
+			</ul>
 
-<nav>
-	<img src="{{ asset('images/logo.png') }}" class="logo">
-
-	<ul class="snip1217">
-		<li>
-			<a href="{{ path('app_home')}}">HOME</a>
-		</li>
-		<li>
-			<a href="{{ path('app_cv')}}">CV</a>
-		</li>
-		<li>
-			<a href="{{ path('app_portfolio')}}">PORTFOLIO</a>
-		</li>
-	</ul>
-	{% if app.user %}
-		<ul>
-			<li class="snip1217">
-				<a href="{{ path('profile_detail')}}">Mon compte</a>
-				|
-				<a href="{{ path('app_logout')}}">Déconnexion</a>
-			</li>
-		</ul>
-
-	{% endif %}
+			<ul class="snip1198 navbar-nav">
+				{% if app.user %}
+					<li>
+						<a class="nav-item" href="{{ path('admin') }}">Admin</a>
+					</li>
+					<li>
+						<a class="nav-item" href="{{ path('profile_detail')}}">Mon compte</a>
+						|
+						<a class="nav-item" href="{{ path('app_logout')}}">Déconnexion</a>
+					</li>
+				{% endif %}
+			</ul>
+		</div>
+	</div>
 </nav>

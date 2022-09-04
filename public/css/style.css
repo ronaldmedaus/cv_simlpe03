@@ -83,6 +83,35 @@ a {
     -webkit-text-decoration-skip: objects;
 }
 
-.imageUser {
-    height: 50% !important;
+.imageUser img {
+    width: 35%;
+    position: absolute;
+    border-radius: 15px;
+    bottom: 200px;
+    right: 150px;
+}
+
+.apropos {
+    width: 400px;
+    bottom: 200px;
+}
+
+
+.rounded {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: left center;
+    width: 200px;
+    height: 200px;
+    transform: rotate(-1deg);
+    transition-property: transform, object-position;
+    transition-duration: 0.2s, 0.2s;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+.rounded:hover {
+    object-position: left center;
+    transform: rotate(0deg) scale(1.5);
 }

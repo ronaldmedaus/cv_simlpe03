@@ -2,8 +2,8 @@
  * Resume/CV template created with Bootstrap 5 by @vmoratog and @jdnichollsc
  */
 const resume = {
-    firstName: "Alejandro",
-    lastName: "Quesada",
+    firstName: "MEDAUSSD",
+    lastName: "Ronaldo",
     jobTitle: "Fullstack Developer",
     photo:
         "https://lh3.googleusercontent.com/-epyR6RX9PNc/Xx_LY7W_XEI/AAAAAAAAAVc/QW1Vrg-C86g3wGLoLszBsjLn05-b8R1gQCK8BGAsYHg/s512/2020-07-27.jpg",

@@ -1,22 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&family=KoHo&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&family=KoHo&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=KoHo&family=Raleway&display=swap');
 
 
 * {
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(35, 81, 10, 0);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
-    text-size-adjust: 100%;
+    text-size-adjust: 90%;
     outline: none !important;
 }
 
+.d-none {
+    background-color: #eff4fd;
+}
+
 html {
-    font-size: 62.5%
+    font-size: 60%;
 }
 
 .container-fluid {
-    padding: 0 10% !important;
+    padding: 0 7% !important;
 }
 
 ul {
@@ -24,31 +31,32 @@ ul {
 }
 
 li::marker {
-    color: black;
+    color: rgb(142, 19, 19);
 }
 
 p {
-    font-size: 2.48262rem;
-    letter-spacing: 0.115103rem;
+    font-size: 0.98262rem;
+    letter-spacing: 0.015103rem;
     color: rgb(102, 103, 102);
-    word-break: break-all;
+    /*word-break: break-all;
     -webkit-box-pack: center;
-    justify-content: center;
+    justify-content: center;*/
 }
+
 
 .headLine {
     width: 0.225693rem;
     top: 0px;
     left: 1rem;
-    height: 11.9617rem;
+    height: 10.9617rem;
     background-color: rgb(41, 41, 41);
 }
 
 .header {
-    padding-top: 17.8297rem;
-    padding-bottom: 10rem;
+    padding-top: 14.8297rem;
+    padding-bottom: 5rem;
     direction: ltr;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .firstName {
@@ -56,7 +64,7 @@ p {
     text-transform: uppercase;
     word-break: break-all;
     color: rgb(62, 62, 62);
-    font-size: 6.65793rem;
+    font-size: 3.65793rem;
     line-height: 1.68;
     letter-spacing: 3.89546rem;
     margin-bottom: 1.12846rem;
@@ -65,7 +73,7 @@ p {
 
 .lastName {
     font-weight: bold;
-    font-size: 9.02771rem;
+    font-size: 3.02771rem;
     text-transform: uppercase;
     word-break: break-all;
     padding-right: 5.64232rem;
@@ -98,7 +106,7 @@ p {
 
 .middleLine {
     width: 0.225693rem;
-    bottom: 3.1597rem;
+    bottom: 1.1597rem;
     left: 1rem;
     height: 5.64232rem;
     background-color: rgb(41, 41, 41);
@@ -120,8 +128,8 @@ a p {
 }
 
 .list-item {
-    padding-top: 2.03123rem;
-    padding-bottom: 2.03123rem;
+    padding-top: 1.03123rem;
+    padding-bottom: 1.03123rem;
     margin-right: 1rem;
 
     &:not(:last-child) {
@@ -130,29 +138,48 @@ a p {
 }
 
 .title {
+    font-family: 'EB Garamond', serif;
     width: 100%;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    line-height: 4.5rem;
-    border-bottom: 1px solid rgb(35, 31, 32);
+    line-height: 3.5rem;
+    border-bottom: 0.3px solid rgb(35, 31, 32);
     padding-top: 0rem;
-    padding-bottom: 3.8rem;
+
     color: rgb(34, 33, 33);
-    letter-spacing: 1.01562rem;
-    margin-bottom: 1.8rem;
+    letter-spacing: 0.03562rem;
+    margin-bottom: 0.2rem;
+}
+
+/*.title p {
+    font-family: 'Raleway', sans-serif;
+}
+*/
+.titre2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+}
+
+
+.titre1 {
+    font-size: 1.75rem;
+    font-family: 'EB Garamond', serif !important;
+    letter-spacing: 0.00562rem;
 }
 
 .personal-details {
-    .title {
-        padding-top: 4rem;
-    }
+    padding-top: 3rem;
+}
+
+.title {
+    padding-top: 2rem;
 }
 
 .bullet {
     position: relative;
 
-    i {
+    /*i {
         font-size: 2.6rem;
     }
 
@@ -164,26 +191,27 @@ a p {
         height: 70%;
         background-color: #292929;
         margin-top: 4.2rem;
-    }
+    }*/
 }
 
 .record {
     padding-top: 2rem;
+}
 
-    p {
-        width: 100%;
-        font-size: 2.7rem;
-        line-height: 1.33;
-        color: rgb(102, 103, 102);
-        word-break: break-word;
-        display: block;
-    }
+
+p {
+    width: 100%;
+    font-size: 1.70rem;
+    line-height: 1.10;
+    color: rgb(102, 103, 102);
+    word-break: break-word;
+    display: block;
 }
 
 li {
     font-family: Raleway;
-    line-height: 1.33;
-    font-size: 2.8806rem;
+    line-height: 1.30;
+    font-size: 1.90rem;
     color: rgb(123, 123, 123);
 }
 
@@ -230,8 +258,8 @@ span {
     }
 
     .header {
-        padding-top: 12rem;
-        padding-bottom: 9rem;
+        padding-top: 8rem;
+        padding-bottom: 6rem;
     }
 
     ul li {
@@ -247,7 +275,7 @@ span {
 
 .snip1221 {
     position: relative;
-    font-size: 40px;
+    font-size: 30px;
     background-color: #2b2b2b;
     color: #ffffff;
     width: 75px;
@@ -293,3 +321,11 @@ span {
     left: 0;
     right: 0;
 }
+
+/*  
+font-family: 'KoHo', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'EB Garamond', serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Jost', sans-serif;
+*/

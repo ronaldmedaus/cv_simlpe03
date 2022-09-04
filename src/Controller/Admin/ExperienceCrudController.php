@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Experience;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
@@ -15,14 +16,17 @@ class ExperienceCrudController extends AbstractCrudController
         return Experience::class;
     }
 
-    
+    /*
     public function configureFields(string $pageName): iterable
     {
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('title'),
+            TextField::new('compagny'),
+            DateTimeField::new('startedAt'),
+            DateTimeField::new('endAt'),
             TextEditorField::new('description'),
         ];
     }
-    
+    */
 }
