@@ -23,13 +23,13 @@ class CvController extends AbstractController
             [],
             [
                 'id' => 'DESC'
-            ], 
+            ],
         );
         $technologies = $technologieRepository->findAll();
         $langues = $langueRepository->findAll();
         $loisirs = $loisirRepository->findAll();
 
-        return $this->render('cv/index.html.twig', [
+        return $this->render('cv/cv.html.twig', [
             'experiences' => $experiences,
             'competences' => $competences,
             'formations' => $formations,

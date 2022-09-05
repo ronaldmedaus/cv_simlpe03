@@ -14,7 +14,7 @@ class PortfolioController extends AbstractController
     {
         $portfolios = $portfolioRepository->findAll();
 
-        return $this->render('portfolio/index.html.twig', [
+        return $this->render('portfolio/portfolio.html.twig', [
             'portfolios' => $portfolios,
         ]);
     }
