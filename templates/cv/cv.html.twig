@@ -33,83 +33,85 @@
 					<div class="row d-flex flex-row col-sm-12">
 						<div class="">
 							<animatable-component autoplay animation="fadeInLeft" easing="ease-in-out" duration="1200">
-								<h1 class="firstName text-nowrap">
-									{{ app.user.nom }}
-								</h1>
-							</animatable-component>
-							<animatable-component autoplay animation="fadeInRight" easing="ease-in-out" duration="1200">
-								<h2 class="lastName text-nowrap">
-									{{ app.user.prenom }}
-								</h2>
-							</animatable-component>
-							<animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
-								<p class="jobTitle">
-									<i class="bi bi-circle-fill"></i>
-									<span class="text-break">
-										Developpeur web
-									</span>
-								</p>
-							</animatable-component>
-						</div>
-						<div>
-							<div v-if="!!photo" class="col-auto d-none d-lg-block d-print-block">
-								<animatable-component autoplay animation="rotateIn" easing="ease-in" duration="1200">
-									<img src="{{ app.user.imagePath }}" class="photo border border-2 border-dark rounded-circle img-fluid float-end img-thumbnail">
+								{% if app.user %}
+									<h1 class="firstName text-nowrap">
+										{{ app.user.nom }}
+									</h1>
+								</animatable-component>
+								<animatable-component autoplay animation="fadeInRight" easing="ease-in-out" duration="1200">
+									<h2 class="lastName text-nowrap">
+										{{ app.user.prenom }}
+									</h2>
+								</animatable-component>
+								<animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
+									<p class="jobTitle">
+										<i class="bi bi-circle-fill"></i>
+										<span class="text-break">
+											Developpeur web
+										</span>
+									</p>
 								</animatable-component>
 							</div>
+							<div>
+								<div v-if="!!photo" class="col-auto d-none d-lg-block d-print-block">
+									<animatable-component autoplay animation="rotateIn" easing="ease-in" duration="1200">
+										<img src="{{ app.user.imagePath }}" class="photo border border-2 border-dark rounded-circle img-fluid float-end img-thumbnail">
+									</animatable-component>
+								</div>
 
-							<animatable-component autoplay animation="fadeInUpBig" easing="ease-in-out" duration="1200">
-								<div class="middleLine position-absolute"></div>
-							</animatable-component>
-						</div>
-					</div>
-
-
-				</header>
-			</div>
-
-			<section class="content">
-				<div class="row">
-					<div class="col personal-details me-4">
-						<div class="row list-item me-5">
-							<div class="col-auto">
-								<animatable-component autoplay animation="heartBeat" easing="ease-in" duration="1200">
-									<div class="icon d-flex">
-										<i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
-									</div>
+								<animatable-component autoplay animation="fadeInUpBig" easing="ease-in-out" duration="1200">
+									<div class="middleLine position-absolute"></div>
 								</animatable-component>
 							</div>
-							<div class="col-auto" style="white-space: pre-line;">
-								<p class="wow bounceInDown">{{ app.user.adresse }}</p>
-							</div>
 						</div>
-						<div v-if="!!phone" class="row list-item me-5">
-							<div class="col-auto align-self-center">
-								<animatable-component autoplay animation="swing" easing="ease-in" duration="1200">
-									<div class="icon d-flex justify-content-center">
-										<i class="bi bi-telephone-fill" role="img" aria-label="Telephone"></i>
-									</div>
-								</animatable-component>
+
+
+					</header>
+				</div>
+
+				<section class="content">
+					<div class="row">
+						<div class="col personal-details me-4">
+							<div class="row list-item me-5">
+								<div class="col-auto">
+									<animatable-component autoplay animation="heartBeat" easing="ease-in" duration="1200">
+										<div class="icon d-flex">
+											<i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
+										</div>
+									</animatable-component>
+								</div>
+								<div class="col-auto" style="white-space: pre-line;">
+									<p class="wow bounceInDown">{{ app.user.adresse }}</p>
+								</div>
 							</div>
-							<div class="col">
-								<a v-bind:href="'tel:'+ phone" class="text-decoration-none">
-									<p>{{ app.user.telephone }}</p>
-								</a>
+							<div v-if="!!phone" class="row list-item me-5">
+								<div class="col-auto align-self-center">
+									<animatable-component autoplay animation="swing" easing="ease-in" duration="1200">
+										<div class="icon d-flex justify-content-center">
+											<i class="bi bi-telephone-fill" role="img" aria-label="Telephone"></i>
+										</div>
+									</animatable-component>
+								</div>
+								<div class="col">
+									<a v-bind:href="'tel:'+ phone" class="text-decoration-none">
+										<p>{{ app.user.telephone }}</p>
+									</a>
+								</div>
 							</div>
-						</div>
-						<div class="row list-item me-5">
-							<div class="col-auto align-self-start">
-								<animatable-component autoplay animation="flip" easing="ease-in" duration="1200">
-									<div class="icon d-flex justify-content-center">
-										<i class="bi bi-envelope-fill" role="img" aria-label="Email"></i>
-									</div>
-								</animatable-component>
-							</div>
-							<div class="col">
-								<a v-bind:href="'mailto:'+ email" class="text-decoration-none">
-									<p>{{ app.user.email }}</p>
-								</a>
-							</div>
+							<div class="row list-item me-5">
+								<div class="col-auto align-self-start">
+									<animatable-component autoplay animation="flip" easing="ease-in" duration="1200">
+										<div class="icon d-flex justify-content-center">
+											<i class="bi bi-envelope-fill" role="img" aria-label="Email"></i>
+										</div>
+									</animatable-component>
+								</div>
+								<div class="col">
+									<a v-bind:href="'mailto:'+ email" class="text-decoration-none">
+										<p>{{ app.user.email }}</p>
+									</a>
+								</div>
+							{% endif %}
 						</div>
 						<div class="row mt-5 me-5">
 							<div class="col">
