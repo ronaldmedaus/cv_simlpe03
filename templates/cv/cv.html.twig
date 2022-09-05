@@ -34,12 +34,12 @@
 						<div class="">
 							<animatable-component autoplay animation="fadeInLeft" easing="ease-in-out" duration="1200">
 								<h1 class="firstName text-nowrap">
-									{{app.user.nom}}
+									{{ app.user.nom }}
 								</h1>
 							</animatable-component>
 							<animatable-component autoplay animation="fadeInRight" easing="ease-in-out" duration="1200">
 								<h2 class="lastName text-nowrap">
-									{{app.user.prenom}}
+									{{ app.user.prenom }}
 								</h2>
 							</animatable-component>
 							<animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
@@ -80,7 +80,7 @@
 								</animatable-component>
 							</div>
 							<div class="col-auto" style="white-space: pre-line;">
-								<p class="wow bounceInDown">{{app.user.adresse}}</p>
+								<p class="wow bounceInDown">{{ app.user.adresse }}</p>
 							</div>
 						</div>
 						<div v-if="!!phone" class="row list-item me-5">
@@ -93,7 +93,7 @@
 							</div>
 							<div class="col">
 								<a v-bind:href="'tel:'+ phone" class="text-decoration-none">
-									<p>{{app.user.telephone}}</p>
+									<p>{{ app.user.telephone }}</p>
 								</a>
 							</div>
 						</div>
@@ -107,7 +107,7 @@
 							</div>
 							<div class="col">
 								<a v-bind:href="'mailto:'+ email" class="text-decoration-none">
-									<p>{{app.user.email}}</p>
+									<p>{{ app.user.email }}</p>
 								</a>
 							</div>
 						</div>
@@ -195,7 +195,7 @@
 								<div class="col-auto pt-2"></div>
 								<div class="col">
 									<p class="title">A propos de moi</p>
-									<p>{{app.user.aPropos}}</p>
+									<p>{{ app.user.aPropos }}</p>
 								</div>
 							</div>
 						</animatable-component>
