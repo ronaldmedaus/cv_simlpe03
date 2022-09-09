@@ -36,7 +36,7 @@ class CvController extends AbstractController
         $loisirs = $loisirRepository->findAll();
         $users = $userRepository->findAll();
 
-        return $this->render('cv/cv.html.twig', [
+        return $this->render('home/cv.html.twig', [
             'experiences' => $experiences,
             'competences' => $competences,
             'formations' => $formations,
