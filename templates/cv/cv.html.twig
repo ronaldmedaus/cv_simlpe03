@@ -32,15 +32,15 @@
 					</animatable-component>
 					<div class="row d-flex flex-row col-sm-12">
 						<div class="">
-							<animatable-component autoplay animation="fadeInLeft" easing="ease-in-out" duration="1200">
-								{% if app.user %}
+							{% for user in users %}
+								<animatable-component autoplay animation="fadeInLeft" easing="ease-in-out" duration="1200">
 									<h1 class="firstName text-nowrap">
-										{{ app.user.nom }}
+										{{user.nom}}
 									</h1>
 								</animatable-component>
 								<animatable-component autoplay animation="fadeInRight" easing="ease-in-out" duration="1200">
 									<h2 class="lastName text-nowrap">
-										{{ app.user.prenom }}
+										{{user.prenom}}
 									</h2>
 								</animatable-component>
 								<animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
@@ -55,7 +55,7 @@
 							<div>
 								<div v-if="!!photo" class="col-auto d-none d-lg-block d-print-block">
 									<animatable-component autoplay animation="rotateIn" easing="ease-in" duration="1200">
-										<img src="{{ app.user.imagePath }}" class="photo border border-2 border-dark rounded-circle img-fluid float-end img-thumbnail">
+										<img src="{{ user.imagePath }}" class="photo border border-2 border-dark rounded-circle img-fluid float-end img-thumbnail">
 									</animatable-component>
 								</div>
 
@@ -81,7 +81,7 @@
 									</animatable-component>
 								</div>
 								<div class="col-auto" style="white-space: pre-line;">
-									<p class="wow bounceInDown">{{ app.user.adresse }}</p>
+									<p class="wow bounceInDown">{{ user.adresse }}</p>
 								</div>
 							</div>
 							<div v-if="!!phone" class="row list-item me-5">
@@ -94,7 +94,7 @@
 								</div>
 								<div class="col">
 									<a v-bind:href="'tel:'+ phone" class="text-decoration-none">
-										<p>{{ app.user.telephone }}</p>
+										<p>{{ user.telephone }}</p>
 									</a>
 								</div>
 							</div>
@@ -108,10 +108,11 @@
 								</div>
 								<div class="col">
 									<a v-bind:href="'mailto:'+ email" class="text-decoration-none">
-										<p>{{ app.user.email }}</p>
+										<p>{{ user.email }}</p>
 									</a>
 								</div>
-							{% endif %}
+							{% endfor %}
+
 						</div>
 						<div class="row mt-5 me-5">
 							<div class="col">
@@ -191,14 +192,16 @@
 						</div>
 						<!--- Fin de loisirs  -->
 					</div>
-					<div class="col-lg-8">
-						<animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
-							<div class="row bullet">
-								<div class="col-auto pt-2"></div>
-								<div class="col">
-									<p class="title">A propos de moi</p>
-									<p>{{ app.user.aPropos }}</p>
-								</div>
+					{% for user in users %}
+						<div class="col-lg-8">
+							<animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+								<div class="row bullet">
+									<div class="col-auto pt-2"></div>
+									<div class="col">
+										<p class="title">A propos de moi</p>
+										<p>{{ user.aPropos }}</p>
+									</div>
+								{% endfor %}
 							</div>
 						</animatable-component>
 						<animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200"></animatable-component>
@@ -241,19 +244,13 @@
 					</div>
 				</div>
 			</section>
-		</section>
-		<div class="btn-group-fab d-print-none">
-			<div>
-				<a href="{{ asset('CV.pdf')}}" target="_blank">
-					<button type="button" class="btn btn-main btn-primary" title="Print">
-						<i class="bi bi-printer fs-3"></i>
-					</button>
-				</a>
-			</div>
-		</div>
-
-		<!-- Bootstrap Bundle with Popper -->
-		<script src="{{ asset('js/wow.min.js') }}" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		</body>
 	</body>
-</html></body></html></body></html></body></body></html>
+</html></section><div class="btn-group-fab d-print-none">
+<div>
+	<a href="{{ asset('CV.pdf')}}" target="_blank">
+		<button type="button" class="btn btn-main btn-primary" title="Print">
+			<i class="bi bi-printer fs-3"></i>
+		</button>
+	</a>
+</div></div><!-- Bootstrap Bundle with Popper --><script src="{{ asset('js/wow.min.js') }}" defer></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script></body></html></body></html></body></html></body></html> </body></body></html>

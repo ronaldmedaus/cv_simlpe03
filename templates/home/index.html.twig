@@ -20,22 +20,23 @@
 				{% include "navbar.html.twig" %}
 				<div class="detel">
 					<div class="row">
-						<div class="col">
-							<h1>{{app.user.nom}}
-								<span>{{app.user.prenom}}</span>
-							</h1>
-						</div>
-					</div>
-					<div class="row d-flex flex-row mb-5">
-						<div class="apropos col-sm-5">
-							<p class="pt-4">{{app.user.aPropos}}</p>
-						</div>
-						<div class="col-md-4  col-sm-12 mt-3 offset-3">
-							<img src="{{ app.user.imagePath }}" class="rounded">
+						{% for user in users %}
+							<div class="col">
+								<h1>{{ user.nom }}
+									<span>{{ user.prenom }}</span>
+								</h1>
+							</div>
 
 						</div>
-					</div>
-
+						<div class="row d-flex flex-row mb-5">
+							<div class="apropos col-sm-5">
+								<p class="pt-4">{{ user.aPropos }}</p>
+							</div>
+							<div class="col-md-4  col-sm-12 mt-3 offset-3">
+								<img src="{{ user.imagePath }}" class="rounded">
+							</div>
+						</div>
+					{% endfor %}
 					<div class="row">
 						<a href="{{ asset('CV.pdf')}}" target="_blank" class="link">
 							<span class="mask">
